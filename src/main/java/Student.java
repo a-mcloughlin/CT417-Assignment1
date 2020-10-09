@@ -10,6 +10,7 @@
  */
 import java.util.*; 
 import org.joda.time.*;
+import org.joda.time.format.*;
 
 public class Student {
     private int ID;
@@ -30,7 +31,39 @@ public class Student {
         this.courses = new LinkedList<Course>();
         this.modules = new LinkedList<Module>();
     }
-
+    
+    public String summarise(){
+        return "ID: "+this.ID+"\tName: "+this.name + "\tDOB: " + formatDate(this.DOB)+ "\tUsername: " + this.username;
+    }
+    
+    public void PrintStudentInfo(){
+        System.out.println("-------------------------------------");
+        System.out.println("Student Name:                 "+ this.name);
+        System.out.println("Student ID:                   "+ this.ID);
+        System.out.println("Student Username:             "+ this.username);
+        System.out.println("Student Date of Birth:        "+ formatDate(this.DOB));
+        System.out.println("Student Age:                  "+ this.age);
+        System.out.println("Modules that Student is enrolled in: ");
+        PrintModuleList();
+        System.out.println("Courses that Student is enrolled in:           ");
+        PrintCourseList();
+        System.out.println("-------------------------------------");
+    }
+        
+    // Print list of courses student is taking
+    public void PrintCourseList(){
+        for (Course c: this.courses){
+            System.out.println(c.summarise());
+        }
+    }
+    
+    // Print list of modules student is taking
+    public void PrintModuleList(){
+        for (Module m: this.modules){
+            System.out.println(m.summarise());
+        }
+    }
+    
     // Add a module to the list of modules taken by the student
     public void addModule(Module module){
         modules.add(module);
@@ -102,5 +135,10 @@ public class Student {
         DateTime today = DateTime.now();
         Period period = new Period(DOB, today);
         this.age = period.getYears();
-    }    
+    }   
+    
+    public String formatDate(DateTime date){
+        DateTimeFormatter fmt = DateTimeFormat.forPattern("dd/MM/yyyy");
+        return date.toString(fmt);
+    }
 }

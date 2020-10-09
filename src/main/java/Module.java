@@ -25,6 +25,37 @@ public class Module {
         this.students = new LinkedList<Student>();
         this.courses = new LinkedList<Course>();
     }
+    
+    public String summarise(){
+        return "ID: "+this.ID+"\tName: "+this.name + "\tLecturer: " + this.lecturer;
+    }
+    
+    public void PrintModuleInfo(){
+        System.out.println("-------------------------------------");
+        System.out.println("Course Name:                 "+ this.name);
+        System.out.println("Course ID:                   "+ this.ID);
+        System.out.println("Course Lecturer:             "+ this.lecturer);
+        System.out.println("Students Enrolled in Module: ");
+        PrintStudentList();
+        System.out.println("Courses that Module is a part of:           ");
+        PrintCourseList();
+        System.out.println("-------------------------------------");
+    }
+      
+// Print list of students enrolled in module
+    public void PrintStudentList(){
+        for (Student s: this.students){
+            System.out.println(s.summarise());
+        }
+    }
+        
+    // Print list of courses making up module
+    public void PrintCourseList(){
+        for (Course c: this.courses){
+            System.out.println(c.summarise());
+        }
+    }
+    
     // Set the ID for this module
     private void setID(int ID){
         this.ID = ID;
