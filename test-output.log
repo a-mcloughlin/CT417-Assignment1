@@ -1,0 +1,64 @@
+cd C:\Users\Aideen\Documents\NetBeansProjects\registration-system-a; "JAVA_HOME=C:\\Program Files\\Java\\jdk-11.0.8" cmd /c "\"C:\\Program Files\\NetBeans-12.1\\netbeans\\java\\maven\\bin\\mvn.cmd\" -Dmaven.ext.class.path=\"C:\\Program Files\\NetBeans-12.1\\netbeans\\java\\maven-nblib\\netbeans-eventspy.jar\" -Dfile.encoding=UTF-8 test"
+Scanning for projects...
+
+----------------< com.mycompany:registration-system-a >-----------------
+Building registration-system-a 1.0-SNAPSHOT
+--------------------------------[ jar ]---------------------------------
+
+--- maven-resources-plugin:2.6:resources (default-resources) @ registration-system-a ---
+Using 'UTF-8' encoding to copy filtered resources.
+skip non existing resourceDirectory C:\Users\Aideen\Documents\NetBeansProjects\registration-system-a\src\main\resources
+
+--- maven-compiler-plugin:3.1:compile (default-compile) @ registration-system-a ---
+Changes detected - recompiling the module!
+Compiling 3 source files to C:\Users\Aideen\Documents\NetBeansProjects\registration-system-a\target\classes
+
+--- maven-resources-plugin:2.6:testResources (default-testResources) @ registration-system-a ---
+Using 'UTF-8' encoding to copy filtered resources.
+skip non existing resourceDirectory C:\Users\Aideen\Documents\NetBeansProjects\registration-system-a\src\test\resources
+
+--- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ registration-system-a ---
+Changes detected - recompiling the module!
+Compiling 3 source files to C:\Users\Aideen\Documents\NetBeansProjects\registration-system-a\target\test-classes
+
+--- maven-surefire-plugin:2.12.4:test (default-test) @ registration-system-a ---
+Surefire report directory: C:\Users\Aideen\Documents\NetBeansProjects\registration-system-a\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running CourseTest
+Test: setEndDate() and getEndDate()
+Test: setStartDate() and getStartDate()
+Test: addStudent() and getStudents()
+Test: setName() and getName()
+Test: addModule() and getModules()
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.301 sec
+Running ModuleTest
+Test: setLecturer() and getLecturer()
+Test: setID() and getID()
+Test: addStudent() and getStudents()
+Test: setName() and getName()
+Test: addCourse() and getCourses()
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running StudentTest
+Test: setID() and getID()
+Test: setName() and getName()
+Test: addCourse() and getCourses()
+Test: addModule() and getModules()
+Test: setUsername() and getUsername()
+Test: setAge() and getAge()
+Test: setDOB() and getDOB()
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+
+Results :
+
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0
+
+------------------------------------------------------------------------
+BUILD SUCCESS
+------------------------------------------------------------------------
+Total time:  5.824 s
+Finished at: 2020-10-09T16:14:26+01:00
+------------------------------------------------------------------------
+
