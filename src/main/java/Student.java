@@ -30,16 +30,6 @@ public class Student {
         this.courses = new LinkedList<Course>();
         this.modules = new LinkedList<Module>();
     }
-    public static void main(String[] args) {
-        Student aideen = new Student("Aideen McLoughlin", "1998-10-28", 17346123);
-        System.out.println("ID:       "+ aideen.ID);
-        System.out.println("Name:     "+ aideen.name);
-        System.out.println("Age:      "+ aideen.age);
-        System.out.println("DOB:      "+ aideen.DOB);
-        System.out.println("Username: "+ aideen.username);
-        System.out.println("Courses:  "+ aideen.courses);
-        System.out.println("Modules:  "+ aideen.modules);
-    }
 
     // Add a module to the list of modules taken by the student
     public void addModule(Module module){
